@@ -1,3 +1,12 @@
-<p>
-  events works!
-</p>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="active" (click)="showCreateEvent()"><a>Criar Evento</a></li>
+      <li class="active"><a>Consultar Evento</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div *ngIf="this.flag == true">
+  <create-event></create-event>
+</div>

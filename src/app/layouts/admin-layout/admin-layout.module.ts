@@ -15,6 +15,7 @@ import { ClubsComponent } from '../../clubs/clubs.component';
 import { TablesComponent } from '../../tables/tables.component';
 import { TypographyComponent } from '../../typography/typography.component';
 import { IconsComponent } from '../../icons/icons.component';
+import { CreateEventComponent } from '../../create-event/create-event.component';
 
 import { NotificationsComponent } from '../../notifications/notifications.component';
 
@@ -37,7 +38,7 @@ import { NotificationsComponent } from '../../notifications/notifications.compon
     TypographyComponent,
     IconsComponent,    
     NotificationsComponent,
-    
+    CreateEventComponent
   ]
 })
 

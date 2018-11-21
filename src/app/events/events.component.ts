@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class EventsComponent implements OnInit {
 
   constructor() { }
-
+  
   ngOnInit() {
   }
-
+  
+  flag: boolean = false;
+  showCreateEvent(){
+    this.flag = !this.flag;
+  }
 }
