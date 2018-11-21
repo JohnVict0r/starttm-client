@@ -12,7 +12,7 @@ import { SidebarModule } from './sidebar/sidebar.module';
 import { AppComponent } from './app.component';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-
+import { PublicLayoutComponent } from './layouts/public-layout/public-layout.component';
 
 
 @NgModule({
@@ -28,7 +28,8 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
   ],
   declarations: [
     AppComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    PublicLayoutComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

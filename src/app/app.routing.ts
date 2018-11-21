@@ -4,11 +4,12 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { PublicLayoutComponent } from './layouts/public-layout/public-layout.component';
 
 const routes: Routes =[
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'public',
     pathMatch: 'full',
   }, {
     path: '',
@@ -19,8 +20,12 @@ const routes: Routes =[
       loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
   }]},
   {
+    path: 'public',
+    component: PublicLayoutComponent,
+  },
+  {
     path: '**',
-    redirectTo: 'dashboard'
+    redirectTo: 'public'
   }
 ];
 
