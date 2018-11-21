@@ -1,12 +1,81 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <ul class="nav navbar-nav">
-      <li class="active" (click)="showCreateEvent()"><a>Criar Evento</a></li>
-      <li class="active"><a>Consultar Evento</a></li>
-    </ul>
-  </div>
-</nav>
-
-<div *ngIf="this.flag == true">
-  <create-event></create-event>
+<div class="main-content">
+    <div class="container-fluid">        
+        <div class="row">            
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Portal de eventos</h4>
+                        <p class="category">Gerencie aqui os seus eventos</p>
+                    </div>
+                    <div class="content">                        
+                        <div class="card-deck">                        
+                          <div class="card">
+                            <div class="card-body">
+                              <h5 class="card-title">Cadastrar Eventos</h5>
+                              <p class="card-text">Cadastre Eventos para que os atletas poderem se increver e participar</p>
+                              <a href="/starttm/eventos/cadastrar" class="btn btn-primary">Cadastrar</a>                              
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="card-body">
+                              <h5 class="card-title">Alterar Eventos</h5>
+                              <p class="card-text">Corrija possiveis erros no cadastramento dos eventos ainda em aberto</p>
+                              <a href="/starttm/eventos/alterar" class="btn btn-primary">Alterar</a>
+                            </div>
+                          </div> <div class="card">
+                            <div class="card-body">
+                              <h5 class="card-title">Listar Eventos</h5>
+                              <p class="card-text">Listar os eventos cadastrado no sistema</p>
+                              <a href="/starttm/eventos/listar" class="btn btn-primary">Listar</a>
+                            </div>
+                          </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img src="/assets/img/fpotm.jpg" alt="FPOTM" class="img-thumbnail"/>
+              <div class="caption">
+                <h3> 1ª Etapa do Campeonato Estadual 2018</h3>
+                <p>Local: Mossoró-RN</p>
+                <p>Data: 24/03/2018 à 25/03/2018</p>
+                <p>Status: <span class="text-danger">Finalizado</span></p>
+                <p><a href="#" class="btn btn-default" role="button">Saiba mais</a></p>
+              </div>
+            </div>
+          </div>
+            <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img src="/assets/img/fpotm.jpg" alt="FPOTM" class="img-thumbnail"/>
+              <div class="caption">
+                <h3> 2ª Etapa do Campeonato Estadual 2018</h3>
+                <p>Local: Parnamirim-RN</p>
+                <p>Data: 09/06/2018 à 10/06/2018</p>
+                <p>Status: <span class="text-danger">Finalizado</span></p>
+                <p>
+                  <a href="#" class="btn btn-default" role="button">Saiba mais</a>
+                </p>
+              </div>
+            </div>
+          </div>
+            <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img src="/assets/img/fpotm.jpg" alt="FPOTM" class="img-thumbnail"/>
+              <div class="caption">
+                <h3> 3ª Etapa do Campeonato estadual 2018</h3>
+                <p>Local: Natal-RN</p>
+                <p>Data: 28/07/2018 à 29/07/2018</p>
+                <p>Status: <span class="text-success">Aberto</span></p>
+                <p>		   
+                  <a href="#" class="btn btn-default" role="button">Saiba mais</a>
+                  <a href="#" class="btn btn-primary" role="button">Inscrever-se</a> 
+              </p>
+              </div>
+            </div>
+          </div>
+        </div>	
+    </div>
 </div>
