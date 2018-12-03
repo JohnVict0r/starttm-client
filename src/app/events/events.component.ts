@@ -12,8 +12,4 @@ export class EventsComponent implements OnInit {
   ngOnInit() {
   }
   
-  flag: boolean = false;
-  showCreateEvent(){
-    this.flag = !this.flag;
-  }
 }
