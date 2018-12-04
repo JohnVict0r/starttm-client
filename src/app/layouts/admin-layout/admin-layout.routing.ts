@@ -22,5 +22,5 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'icons',          component: IconsComponent },
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'create-event', component: CreateEventComponent },
-    { path: 'table', component: TableComponent }
+    { path: 'table-event', component: TableComponent }
 ];
