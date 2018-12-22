@@ -9,7 +9,7 @@ import { TableComponent } from '../../table/table.component';
 
 
 export const AdminLayoutRoutes: Routes = [
-    { path: 'dashboard',      loadChildren: 'app/home/home.module#HomeModule'},
+    { path: 'dashboard',      loadChildren: 'app/dashboard/dashboard.module#DashboardModule'},
     { path: 'user',           component: UserComponent },
     { path: 'events',           loadChildren: 'app/events/events.module#EventsModule'},
     { path: 'clubs',           loadChildren: 'app/clubs/clubs.module#ClubsModule'},
