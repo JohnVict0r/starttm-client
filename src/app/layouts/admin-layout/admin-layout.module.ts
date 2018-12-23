@@ -8,14 +8,11 @@ import { NguiMapModule} from '@ngui/map';
 
 import { AdminLayoutRoutes } from './admin-layout.routing';
 
-import { HomeComponent } from '../../home/home.component';
 import { UserComponent } from '../../user/user.component';
-import { EventsComponent } from '../../events/events.component';
-import { ClubsComponent } from '../../clubs/clubs.component';
+
 import { TablesComponent } from '../../tables/tables.component';
 import { TypographyComponent } from '../../typography/typography.component';
 import { IconsComponent } from '../../icons/icons.component';
-import { CreateEventComponent } from '../../create-event/create-event.component';
 import { TableComponent } from '../../table/table.component';
 
 import { NotificationsComponent } from '../../notifications/notifications.component';
@@ -31,15 +28,11 @@ import { NotificationsComponent } from '../../notifications/notifications.compon
     NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=YOUR_KEY_HERE'})
   ],
   declarations: [
-    HomeComponent,
     UserComponent,
-    EventsComponent,
-    ClubsComponent,
     TablesComponent,
     TypographyComponent,
     IconsComponent,    
     NotificationsComponent,
-    CreateEventComponent,
     TableComponent
   ]
 })

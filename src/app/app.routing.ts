@@ -6,6 +6,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { PublicLayoutComponent } from './layouts/public-layout/public-layout.component';
 
+import { NaoAutorizadoComponent } from './core/nao-autorizado.component';
+import { PaginaNaoEncontradaComponent } from './core/pagina-nao-encontrada.component';
+
 const routes: Routes =[
   {
     path: '',
@@ -23,10 +26,9 @@ const routes: Routes =[
     path: 'public',
     component: PublicLayoutComponent,
   },
-  {
-    path: '**',
-    redirectTo: 'public'
-  }
+  { path: 'nao-autorizado', component: NaoAutorizadoComponent },
+  { path: 'pagina-nao-encontrada', component: PaginaNaoEncontradaComponent },
+  { path: '**', redirectTo: 'pagina-nao-encontrada' }
 ];
 
 @NgModule({

@@ -7,27 +7,15 @@
                         <h4 class="title">Portal de Eventos</h4>
                         <p class="category">Gerencie aqui os seus eventos</p>
                     </div>
-                    <div class="content">                        
+                    <div class="content">                       
                         <div class="card-deck">                        
-                          <div class="card">
+                          <div class="card" routerLinkActive="active" *ngFor="let menuItem of menuItems">
                             <div class="card-body">
-                              <h4 class="card-title">Cadastrar Eventos</h4>
-                              <p class="card-text">Cadastre eventos para que os atletas possam se inscrever e participar</p>
-                              <a href="/starttm/eventos/cadastrar" class="btn btn-primary">Cadastrar</a>                              
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-body">
-                              <h4 class="card-title">Alterar Eventos</h4>
-                              <p class="card-text">Corrija possíveis erros no cadastramento dos eventos ainda em aberto</p>
-                              <a href="/starttm/eventos/alterar" class="btn btn-primary">Alterar</a>
-                            </div>
-                          </div> 
-                          <div class="card">
-                            <div class="card-body">
-                              <h4 class="card-title">Listar Eventos</h4>
-                              <p class="card-text">Listar os eventos cadastrados no sistema</p>
-                              <a href="/starttm/eventos/listar" class="btn btn-primary">Listar</a>
+                              <h4 class="card-title">{{menuItem.title}}</h4>
+                              <p class="card-text">{{menuItem.text}}</p>
+                              <a  [routerLink]="[menuItem.path]" class="[menuItem.class]">
+                                <p>{{menuItem.button}}</p>
+                              </a>
                             </div>
                           </div>
                         </div>                        

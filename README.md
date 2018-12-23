@@ -59,11 +59,11 @@ light-bootstrap-dashboard-angular
 │   │   ├── app.component.ts
 │   │   ├── app.module.ts
 │   │   ├── app.routing.ts
-│   │   ├── home
-│   │   │   ├── home.component.css
-│   │   │   ├── home.component.html
-│   │   │   ├── home.component.spec.ts
-│   │   │   └── home.component.ts
+│   │   ├── dashboard
+│   │   │   ├── dashboard.component.css
+│   │   │   ├── dashboard.component.html
+│   │   │   ├── dashboard.component.spec.ts
+│   │   │   └── dashboard.component.ts
 │   │   ├── icons
 │   │   │   ├── icons.component.css
 │   │   │   ├── icons.component.html
