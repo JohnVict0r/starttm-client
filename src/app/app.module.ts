@@ -13,7 +13,9 @@ import { AppComponent } from './app.component';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { PublicLayoutComponent } from './layouts/public-layout/public-layout.component';
+import { SegurancaModule } from './seguranca/seguranca.module';
 
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   imports: [
@@ -24,7 +26,10 @@ import { PublicLayoutComponent } from './layouts/public-layout/public-layout.com
     NavbarModule,
     FooterModule,
     SidebarModule,
-    AppRoutingModule
+    AppRoutingModule,
+
+    CoreModule
+    //SegurancaModule //utilizar quando tiver pronto a apiUrl
   ],
   declarations: [
     AppComponent,
