@@ -12,4 +12,4 @@ import { PublicLayoutRoutes } from './public-layout.routing';
   ],
 })
 
-export class AdminLayoutModule {}
+export class PublicLayoutModule { }

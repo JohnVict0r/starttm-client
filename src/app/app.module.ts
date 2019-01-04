@@ -26,10 +26,10 @@ import { CoreModule } from './core/core.module';
     NavbarModule,
     FooterModule,
     SidebarModule,
-    AppRoutingModule,
 
-    CoreModule
-    //SegurancaModule //utilizar quando tiver pronto a apiUrl
+    CoreModule,
+    SegurancaModule, //utilizar quando tiver pronto a apiUrl
+    AppRoutingModule,
   ],
   declarations: [
     AppComponent,
