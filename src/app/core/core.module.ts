@@ -5,6 +5,7 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { CommonModule, registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 
+import { MessageService } from 'primeng/components/common/messageservice';
 import { JwtHelperService } from '@auth0/angular-jwt';
 
 import { AuthService } from './../seguranca/auth.service';
@@ -33,6 +34,7 @@ registerLocaleData(localePt);
     AuthService,
     StartHttp,
 
+    MessageService,
     JwtHelperService,
     Title,
     { provide: LOCALE_ID, useValue: 'pt' }

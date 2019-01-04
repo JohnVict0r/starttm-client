@@ -5,10 +5,10 @@ import { ErrorHandlerService } from './../../core/error-handler.service';
 import { AuthService } from './../auth.service';
 
 @Component({
-  selector: 'app-login-form',
-  templateUrl: './login-form.component.html',
+  selector: 'app-register-form',
+  templateUrl: './register-form.component.html',
 })
-export class LoginFormComponent {
+export class RegisterFormComponent {
 
   constructor(
     private auth: AuthService,
@@ -16,14 +16,13 @@ export class LoginFormComponent {
     private router: Router
   ) { }
 
-  login(usuario: string, senha: string) {
-    this.auth.login(usuario, senha)
+  register(usuario: string, senha: string, email: string) {
+    this.auth.register(usuario, senha, email)
       .then(() => {
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/login']);
       })
       .catch(erro => {
         this.errorHandler.handle(erro);
       });
   }
-
 }

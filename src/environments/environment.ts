@@ -5,8 +5,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:8080', //Aguardar projeto subir pra o heroku
+  apiUrl: 'http://localhost:3000', //Aguardar projeto subir pra o heroku
 
-  tokenWhitelistedDomains: [ new RegExp('localhost:8080') ],
+  tokenWhitelistedDomains: [ new RegExp('localhost:3000') ],
   tokenBlacklistedRoutes: [ new RegExp('\/oauth\/token') ]
 };
