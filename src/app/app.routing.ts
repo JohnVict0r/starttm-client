@@ -1,3 +1,5 @@
+import { AuthGuard } from './_guards/auth.guard';
+
 import { NgModule } from '@angular/core';
 import { CommonModule, } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
@@ -21,7 +23,8 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
-      }]
+      }],
+    //canActivate: [AuthGuard] //Adicionar quando tiver fazendo login!
   },
   {
     path: 'public',

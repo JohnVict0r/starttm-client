@@ -1,6 +1,7 @@
+import { ErrorInterceptor } from './_helpers/erros.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
@@ -16,6 +17,7 @@ import { PublicLayoutComponent } from './layouts/public-layout/public-layout.com
 import { SegurancaModule } from './seguranca/seguranca.module';
 
 import { CoreModule } from './core/core.module';
+import { JwtInterceptor } from './_helpers/jwt.interceptor';
 
 @NgModule({
   imports: [
@@ -26,9 +28,8 @@ import { CoreModule } from './core/core.module';
     NavbarModule,
     FooterModule,
     SidebarModule,
-
     CoreModule,
-    SegurancaModule, //utilizar quando tiver pronto a apiUrl
+    SegurancaModule,
     AppRoutingModule,
   ],
   declarations: [
@@ -36,7 +37,9 @@ import { CoreModule } from './core/core.module';
     AdminLayoutComponent,
     PublicLayoutComponent
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

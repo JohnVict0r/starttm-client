@@ -1,5 +1,5 @@
 import { Http, RequestOptions } from "@angular/http";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
@@ -24,6 +24,8 @@ export function tokenGetter() {
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
+    SegurancaRoutingModule,
 
     JwtModule.forRoot({
       config: {

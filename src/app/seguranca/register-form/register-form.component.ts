@@ -1,28 +1,62 @@
-import { Router } from '@angular/router';
+import { AuthenticationService } from './../../_services/authentication.service';
+import { AlertService } from './../../_services/alert.service';
+
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { first } from 'rxjs/operators';
+import { UserService } from '../../_services/user.service';
 
-import { ErrorHandlerService } from './../../core/error-handler.service';
-import { AuthService } from './../auth.service';
 
-@Component({
-  selector: 'app-register-form',
-  templateUrl: './register-form.component.html',
-})
-export class RegisterFormComponent {
+@Component({ templateUrl: 'register-form.component.html' })
+export class RegisterFormComponent implements OnInit {
+  registerForm: FormGroup;
+  loading = false;
+  submitted = false;
 
   constructor(
-    private auth: AuthService,
-    private errorHandler: ErrorHandlerService,
-    private router: Router
-  ) { }
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private authenticationService: AuthenticationService,
+    private userService: UserService,
+    private alertService: AlertService
+  ) {
+    // redirect to home if already logged in
+    if (this.authenticationService.currentUserValue) {
+      this.router.navigate(['/']);
+    }
+  }
 
-  register(usuario: string, senha: string, email: string) {
-    this.auth.register(usuario, senha, email)
-      .then(() => {
-        this.router.navigate(['/login']);
-      })
-      .catch(erro => {
-        this.errorHandler.handle(erro);
-      });
+  ngOnInit() {
+    this.registerForm = this.formBuilder.group({
+      username: ['', Validators.required],
+      email: ['', Validators.required],
+      password: ['', [Validators.required, Validators.minLength(8)]]
+    });
+  }
+
+  // convenience getter for easy access to form fields
+  get f() { return this.registerForm.controls; }
+
+  onSubmit() {
+    this.submitted = true;
+
+    // stop here if form is invalid
+    if (this.registerForm.invalid) {
+      return;
+    }
+
+    this.loading = true;
+    this.userService.register(this.registerForm.value)
+      .pipe(first())
+      .subscribe(
+        data => {
+          this.alertService.success('Registration successful', true);
+          this.router.navigate(['/login']);
+        },
+        error => {
+          this.alertService.error(error);
+          this.loading = false;
+        });
   }
 }
