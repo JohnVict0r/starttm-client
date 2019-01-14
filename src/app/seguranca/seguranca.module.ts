@@ -1,3 +1,4 @@
+import { components } from './../layouts/admin-layout/admin-layout.module';
 import { AuthGuard } from './../_guards/auth.guard';
 
 import { Http, RequestOptions } from "@angular/http";
@@ -19,6 +20,11 @@ export function tokenGetter() {
   return localStorage.getItem("token");
 }
 
+const components = [
+  LoginFormComponent,
+  RegisterFormComponent
+]
+
 @NgModule({
   imports: [
     CommonModule,
@@ -36,7 +42,9 @@ export function tokenGetter() {
     InputTextModule,
     ButtonModule,
   ],
-  declarations: [LoginFormComponent, RegisterFormComponent],
+  declarations: [
+    components
+  ],
   providers: [AuthGuard]
 })
 export class SegurancaModule { }

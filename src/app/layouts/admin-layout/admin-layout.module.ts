@@ -16,6 +16,15 @@ import { NguiMapModule } from '@ngui/map';
 
 import { AdminLayoutRoutes } from './admin-layout.routing';
 
+const components = [
+  UserComponent,
+  TablesComponent,
+  TypographyComponent,
+  IconsComponent,
+  NotificationsComponent,
+  TableComponent
+]
+
 @NgModule({
   imports: [
     CommonModule,
@@ -25,12 +34,7 @@ import { AdminLayoutRoutes } from './admin-layout.routing';
     NguiMapModule.forRoot({ apiUrl: 'https://maps.google.com/maps/api/js?key=YOUR_KEY_HERE' })
   ],
   declarations: [
-    UserComponent,
-    TablesComponent,
-    TypographyComponent,
-    IconsComponent,
-    NotificationsComponent,
-    TableComponent
+    components
   ]
 })
 
