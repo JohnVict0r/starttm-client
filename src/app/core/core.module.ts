@@ -1,3 +1,4 @@
+import { AuthService } from './../_services/auth.service';
 import { Title } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
@@ -8,7 +9,7 @@ import localePt from '@angular/common/locales/pt';
 import { MessageService } from 'primeng/components/common/messageservice';
 import { JwtHelperService } from '@auth0/angular-jwt';
 
-import { AuthService } from './../seguranca/auth.service';
+
 import { ErrorHandlerService } from './error-handler.service';
 
 import { NaoAutorizadoComponent } from './nao-autorizado.component';

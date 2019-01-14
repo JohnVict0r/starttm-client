@@ -32,14 +32,15 @@ import { environment } from '../environments/environment'; // Angular CLI enviro
     NavbarModule,
     FooterModule,
     SidebarModule,
-    CoreModule,
+    CoreModule, //AuthModule
     SegurancaModule,
     AppRoutingModule,
+
     //StoreModule.forRoot(reducers), // Instrumentation must be imported after importing StoreModule (config is optional)
-    StoreDevtoolsModule.instrument({
-      maxAge: 25, // Retains last 25 states
-      logOnly: environment.production, // Restrict extension to log-only mode
-    }),
+    //StoreDevtoolsModule.instrument({
+    //  maxAge: 25, // Retains last 25 states
+    //logOnly: environment.production, // Restrict extension to log-only mode
+    //}),
   ],
   declarations: [
     AppComponent,

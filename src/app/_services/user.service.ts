@@ -7,6 +7,9 @@ import { User } from '../_models/user';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
+
+    private BASE_URL = environment.apiUrl;
+
     constructor(private http: HttpClient) { }
 
     getAll() {
@@ -18,7 +21,8 @@ export class UserService {
     }
 
     register(user: User) {
-        return this.http.post(`${environment.apiUrl}/subscriptions`, user);
+        const url = `${this.BASE_URL}/subscriptions`;
+        return this.http.post(url, user);
     }
 
     update(user: User) {

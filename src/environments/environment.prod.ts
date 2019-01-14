@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://starttm-api.herokuapp.com', //url desejável do heroku
+  apiUrl: 'http://localhost:3000', //url desejável do heroku
 
-  tokenWhitelistedDomains: [ new RegExp('starttm-api.herokuapp.com') ],
-  tokenBlacklistedRoutes: [ new RegExp('\/oauth\/token') ]
+  tokenWhitelistedDomains: [new RegExp('starttm-api.herokuapp.com')],
+  tokenBlacklistedRoutes: [new RegExp('\/oauth\/token')]
 };

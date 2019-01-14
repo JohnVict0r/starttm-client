@@ -1,9 +1,15 @@
-import { AuthenticationService } from './_services/authentication.service';
+import { Role } from './_models/role';
+import { AuthService } from './_services/auth.service';
 
 import { Component, OnInit } from '@angular/core';
 import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
 import { User } from './_models/user';
 import { Router } from '@angular/router';
+
+interface AppState {
+  currentUser: User;
+  role: Role;
+}
 
 @Component({
   selector: 'app-root',
@@ -12,22 +18,23 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
 
-  currentUser: User;
+  //currentUser: User;
   constructor(
     public location: Location,
     private router: Router,
-    private authenticationService: AuthenticationService
+    private authService: AuthService
   ) {
-    this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+    //this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
   }
 
   ngOnInit() {
   }
 
   logout() {
-    this.authenticationService.logout();
+    this.authService.logout();
     this.router.navigate(['/login']);
   }
+
   isMap(path) {
     var titlee = this.location.prepareExternalUrl(this.location.path());
     titlee = titlee.slice(1);

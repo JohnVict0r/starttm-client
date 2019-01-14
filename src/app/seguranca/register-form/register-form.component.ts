@@ -1,4 +1,4 @@
-import { AuthenticationService } from './../../_services/authentication.service';
+import { AuthService } from './../../_services/auth.service';
 import { AlertService } from './../../_services/alert.service';
 
 import { Component, OnInit } from '@angular/core';
@@ -17,12 +17,12 @@ export class RegisterFormComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private authenticationService: AuthenticationService,
+    private authService: AuthService,
     private userService: UserService,
     private alertService: AlertService
   ) {
     // redirect to home if already logged in
-    if (this.authenticationService.currentUserValue) {
+    if (this.authService.currentUserValue) {
       this.router.navigate(['/']);
     }
   }

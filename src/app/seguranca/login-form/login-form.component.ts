@@ -1,5 +1,5 @@
 import { AlertService } from './../../_services/alert.service';
-import { AuthenticationService } from './../../_services/authentication.service';
+import { AuthService } from './../../_services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -16,11 +16,11 @@ export class LoginFormComponent implements OnInit {
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
-    private authenticationService: AuthenticationService,
+    private authService: AuthService,
     private alertService: AlertService
   ) {
     // redirect to home if already logged in
-    if (this.authenticationService.currentUserValue) {
+    if (this.authService.currentUserValue) {
       this.router.navigate(['/']);
     }
   }
@@ -47,7 +47,7 @@ export class LoginFormComponent implements OnInit {
     }
 
     this.loading = true;
-    this.authenticationService.login(this.f.username.value, this.f.password.value)
+    this.authService.logIn(this.f.username.value, this.f.password.value)
       .pipe(first())
       .subscribe(
         data => {
