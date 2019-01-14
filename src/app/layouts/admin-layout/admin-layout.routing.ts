@@ -1,21 +1,19 @@
+import { TableComponent } from './../../_components/table/table.component';
+import { NotificationsComponent } from './../../_components/notifications/notifications.component';
+import { IconsComponent } from './../../_components/icons/icons.component';
+import { TypographyComponent } from './../../_components/typography/typography.component';
+import { TablesComponent } from './../../_components/tables/tables.component';
+import { UserComponent } from './../../_components/user/user.component';
 import { Routes } from '@angular/router';
 
-import { UserComponent } from '../../user/user.component';
-import { TablesComponent } from '../../tables/tables.component';
-import { TypographyComponent } from '../../typography/typography.component';
-import { IconsComponent } from '../../icons/icons.component';
-import { NotificationsComponent } from '../../notifications/notifications.component';
-import { TableComponent } from '../../table/table.component';
-
-
 export const AdminLayoutRoutes: Routes = [
-    { path: 'dashboard',      loadChildren: 'app/dashboard/dashboard.module#DashboardModule'},
-    { path: 'user',           component: UserComponent },
-    { path: 'events',           loadChildren: 'app/events/events.module#EventsModule'},
-    { path: 'clubs',           loadChildren: 'app/clubs/clubs.module#ClubsModule'},
-    { path: 'table',          component: TablesComponent },
-    { path: 'typography',     component: TypographyComponent },
-    { path: 'icons',          component: IconsComponent },
-    { path: 'notifications',  component: NotificationsComponent },
+    { path: 'dashboard', loadChildren: 'app/_components/dashboard/dashboard.module#DashboardModule' },
+    { path: 'user', component: UserComponent },
+    { path: 'events', loadChildren: 'app/_components/events/events.module#EventsModule' },
+    { path: 'clubs', loadChildren: 'app/_components/clubs/clubs.module#ClubsModule' },
+    { path: 'table', component: TablesComponent },
+    { path: 'typography', component: TypographyComponent },
+    { path: 'icons', component: IconsComponent },
+    { path: 'notifications', component: NotificationsComponent },
     { path: 'table-event', component: TableComponent }
 ];

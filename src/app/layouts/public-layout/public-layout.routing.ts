@@ -1,8 +1,6 @@
+import { PublicComponent } from './../../_components/public/public.component';
 import { Routes } from '@angular/router';
 
-import { PublicComponent } from '../../public/public.component';
-
-
 export const PublicLayoutRoutes: Routes = [
-    { path: 'public',      component: PublicComponent },    
+    { path: 'public', component: PublicComponent },
 ];
