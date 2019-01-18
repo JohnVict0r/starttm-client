@@ -1,4 +1,4 @@
-import { components } from './../layouts/admin-layout/admin-layout.module';
+
 import { AuthGuard } from './../_guards/auth.guard';
 
 import { Http, RequestOptions } from "@angular/http";

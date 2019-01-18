@@ -7,14 +7,14 @@ import { EventsComponent } from './events/events.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 
 @NgModule({
-  imports: [ 
+  imports: [
     RouterModule, //permite navegar no sistema sem precisar dar um reload na página.
     CommonModule, //permite utilizar *ngFor *ngIf ... no component.html
     EventsRoutingModule
   ],
   declarations: [
-      EventsComponent,
-      CreateEventComponent
-      ],
+    EventsComponent,
+    CreateEventComponent
+  ],
 })
 export class EventsModule { }
