@@ -24,7 +24,7 @@ const routes: Routes = [
         path: '',
         loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
       }],
-    canActivate: [AuthGuard] // para acessar é necessário estar autenticado!
+    //canActivate: [AuthGuard] // para acessar é necessário estar autenticado!
   },
   {
     path: 'public',
